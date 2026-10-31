@@ -31,3 +31,10 @@ def _binary_search_bound(arr, target, find_first):
             else:
                 low = mid + 1
         return result
+
+def find_start_end(arr, target):
+    start = _binary_search_bound(arr, target, find_first=True)
+    end = _binary_search_bound(arr, target, find_first=False)
+
+    return [start, end]
+
